@@ -1,0 +1,20 @@
+1. D
+2. C
+3. C
+4. C
+5. B
+6. A
+7. B
+8. C
+9. D
+10. C
+11. Pseudocode
+12. float
+13. ==
+14. if (grade >= 40) printf("Passed); else: printf("Failed)
+15. printf(num1 > 10 ? "num1 is larger than 10\n" : "num1 is less than or equal 10\n");
+16. 8
+17. 6
+18. 8
+19. No
+20. 5
