@@ -1,7 +1,13 @@
 #include <stdio.h>
 
+/**
+ *
+ * This program read 10 integer and count number of positive and negative values among 10 inputs
+ *
+ */
 int main()
 {
+  // Set x is a array with 10 elements, number of positive and negative number is set to 0 by default
   int x[10], number_positive = 0, number_negative = 0;
 
   for (int i = 0; i < 10; i++)

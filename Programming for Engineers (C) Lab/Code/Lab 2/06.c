@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ *
+ * This program generate a "mystery" number random from 1 to 100, the user will guess this nnumber by prompt a value
+ *
+ */
 int main()
 {
   int x, y;

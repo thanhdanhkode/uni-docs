@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
+ *
+ * This program classify each grade into classification, and also loop to ask user to continue or not
+ *
  * !IMPORTANT NOTE: Add white-space befor the format specifier '%c' because input buffer may contain white-space or a newline character which may break the program in while-loop
  */
-
 int main()
 {
   char x, y;

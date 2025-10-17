@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <math.h>
 
+/**
+ *
+ * This program calculate the roots of the second order equation
+ *
+ */
 int main()
 {
-  float a, b, c, x1, x2, delta;
+  float a, b, c, x1, x2, delta = 0;
 
-  printf("Enter the value of a: ");
-  scanf("%f", &a);
-  printf("Enter the value of b: ");
-  scanf("%f", &b);
-  printf("Enter the value of c: ");
-  scanf("%f", &c);
+  printf("Enter the value of a, b, c: ");
+  scanf("%f %f %f", &a, &b, &c);
 
   delta = b * b - 4 * a * c;
   if (delta < 0)

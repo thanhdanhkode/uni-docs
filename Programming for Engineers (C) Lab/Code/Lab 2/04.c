@@ -1,13 +1,24 @@
 #include <stdio.h>
 
+/**
+ *
+ * This program calculate the factorial of a positive number
+ *
+ */
 int main()
 {
-  int x, factorial = 1;
+  int num, factorial = 1;
 
   printf("Enter a positive number: ");
-  scanf("%d", &x);
+  scanf("%d", &num);
 
-  for (int i = 1; i <= x; i++)
+  if (num < 0)
+  {
+    printf("%d is not a positive number!", num);
+    return 0;
+  }
+
+  for (int i = 1; i <= num; i++)
   {
     factorial *= i;
   }

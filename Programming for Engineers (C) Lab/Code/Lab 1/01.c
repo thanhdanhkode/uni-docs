@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-int main() {
-  int i;
-  printf("Enter an integer: ");
-  scanf("%d", &i);
+/**
+ *
+ * This program print the input number is a even or odd integer
+ *
+ */
+int main()
+{
+  int num;
+  printf("Enter an integer: "); // Prompt user to input a number
+  scanf("%d", &num);
 
-  if (i % 2 == 0) {
-    printf("%d is even integer\n", i);
-  } else {
-    printf("%d is odd integer\n", i);
-  }
-  
+  num % 2 == 0 ? printf("%d is even integer\n", num) : printf("%d is odd integer\n", num);
+
   return 0;
 }

@@ -12,6 +12,11 @@ int factorial(int x)
   return r;
 }
 
+/**
+ *
+ * This program calculate the sin(𝑥) which is described in the series in the question file
+ *
+ */
 int main()
 {
   float x, sin;
