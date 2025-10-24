@@ -14,7 +14,7 @@ int main()
 
   if (num < 0)
   {
-    printf("%d is not a positive number!", num);
+    printf("Input number must be a positive number!");
     return 0;
   }
 

@@ -1,8 +1,14 @@
 #include <stdio.h>
 
+/**
+ *
+ * This function return the reverse integer number of the input integer number
+ *
+ * @return Reversed Number
+ */
 int reverseNumber(int num);
 
-int main()
+    int main()
 {
   int num;
 
@@ -12,17 +18,7 @@ int main()
   printf("Reversed digits: %d", reverseNumber(num));
   return 0;
 }
-/**
- *
- * This function return the reverse integer number of the input integer number
- *
- * @example
- * // return 4321
- * reverseNumber(1234)
- * 
- * @return Reversed Number
- *
- */
+
 int reverseNumber(int num)
 {
   int reversedNum = 0, reminder;

@@ -8,7 +8,7 @@
 int main()
 {
   // Set x is a array with 10 elements, number of positive and negative number is set to 0 by default
-  int x[10], number_positive = 0, number_negative = 0;
+  int x[10], number_positive = 0, number_negative = 0, number_zero = 0;
 
   for (int i = 0; i < 10; i++)
   {
@@ -20,12 +20,15 @@ int main()
   {
     if (x[i] > 0)
       number_positive += 1;
+    else if (x[i] == 0)
+      number_zero += 1;
     else
       number_negative += 1;
   }
 
   printf("Number of positive: %d\n", number_positive);
   printf("Number of negative: %d\n", number_negative);
+  if (number_zero != 0) printf("Number of zeros is: %d, Zero is not a positive or negative number", number_zero);
 
   return 0;
 }

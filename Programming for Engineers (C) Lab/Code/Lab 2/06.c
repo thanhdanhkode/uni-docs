@@ -12,13 +12,14 @@ int main()
   int x, y;
   char z;
 
+start:
+  srand(time(0));
+  y = rand() % 100 + 1;
+
   printf("I have a number between 1 and 100.\n");
   printf("Can you guess my number?\n");
   printf("Please type your first guess...\n");
   scanf("%d", &x);
-
-  srand(time(0));
-  y = rand() % 100 + 1;
 
   while (1)
   {
@@ -28,19 +29,9 @@ int main()
       printf("Would you like to continue (y or n)?\n");
       scanf(" %c", &z);
       if (z == 'y')
-      {
-        srand(time(0));
-        y = rand() % 100 + 1;
-        printf("Please type your first guess...\n");
-        scanf("%d", &x);
-        continue;
-      }
+        goto start;
       else
-      {
-        printf("Game ends here...\n");
-        x = -1;
-        break;
-      }
+        goto end;
     }
     else if (x > y)
     {
@@ -53,6 +44,9 @@ int main()
       scanf("%d", &x);
     }
   };
+
+end:
+  printf("Game ends here...\n");
 
   return 0;
 }

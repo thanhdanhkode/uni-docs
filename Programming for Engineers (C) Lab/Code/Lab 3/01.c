@@ -5,7 +5,7 @@
  *
  * This program read several numbers and rounds  each  of  these  numbers  to  the
 nearest integer, print the original number and rounded one
- * - **rounded**(double number)**: rounded number to the nearest integer
+ * - **rounded(double number)**: rounded number to the nearest integer
  * - **floor(double number)**: rounded number DOWN to the nearest integer
  *
  */

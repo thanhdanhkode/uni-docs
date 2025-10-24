@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *
- * This program covert a Binary number to Decimal number using iterations
+ * This program convert a Binary number to Decimal number using iterations
  *
  */
 int main()
@@ -11,15 +11,15 @@ int main()
   printf("Enter binary value: ");
   scanf("%d", &x);
 
-  while (x)
+  while (x != 0)
   {
-    int ld = x % 10;
+    int reminder = x % 10;
     x /= 10;
-    decimal += ld * base;
+    decimal += reminder * base;
     base *= 2;
   }
 
-  printf("Decimal: %d", binToDec(x));
+  printf("Decimal: %d", decimal);
 
   return 0;
 }
