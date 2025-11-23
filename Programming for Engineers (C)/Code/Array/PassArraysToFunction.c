@@ -9,8 +9,7 @@ int main(void)
 {
   int a[SIZE] = {0, 1, 2, 3, 4};
 
-  puts("Effects of passing entire arrays by reference:\n\nThe "
-       "values of the original array are:");
+  puts("Effects of passing entire arrays by reference:\n\nThe values of the original array are:");
 
   for (size_t i = 0; i < SIZE; i++)
   {
