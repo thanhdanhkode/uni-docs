@@ -1,58 +1,103 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int main(void)
+void bubbleSort(int arr[], int n)
 {
-  int array1[100];
-  int array2[100];
-  int mergedArraySize = 0;
-  int mergedArray[200];
-  int userInput;
-
-  printf("Input first array elements (end with -1):\n");
-  for (size_t i = 0; i < 100; i++)
+  int i, j, temp;
+  for (i = 0; i < n - 1; i++)
   {
-    int value;
-    if (scanf("%d", &value) != 1 || value == -1)
-      break;
-    array1[i] = value;
-    mergedArraySize++;
+    for (j = 0; j < n - i - 1; j++)
+    {
+      if (arr[j] > arr[j + 1])
+      {
+        // Swap elements if they are in the wrong order
+        temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+}
+
+int main()
+{
+  int n1, n2, n3, i;
+  // Define a maximum size for the arrays
+  int max_size = 100;
+  int arr1[max_size], arr2[max_size], merged[max_size * 2];
+
+  // --- Input First Array ---
+  do
+  {
+    printf("Enter the number of elements for the first array: ");
+    scanf("%d", &n1);
+    if (n1 <= 0)
+    {
+      printf("Error: Array length cannot be zero or negative. Please try again.\n");
+    }
+    else if (n1 > max_size)
+    {
+      printf("Error: Max size is %d.\n", max_size);
+      n1 = 0; // force loop to continue
+    }
+  } while (n1 <= 0);
+
+  printf("Input first array elements (%d numbers): ", n1);
+  for (i = 0; i < n1; i++)
+  {
+    scanf("%d", &arr1[i]);
   }
 
-  printf("Input second array elements (end with -1):\n");
-  for (size_t i = 0; i < 100; i++)
+  // --- Input Second Array ---
+  do
   {
-    int value;
-    if (scanf("%d", &value) != 1 || value == -1)
-      break;
-    array2[i] = value;
-    mergedArraySize++;
+    printf("Enter the number of elements for the second array: ");
+    scanf("%d", &n2);
+    if (n2 <= 0)
+    {
+      printf("Error: Array length cannot be zero or negative. Please try again.\n");
+    }
+    else if (n2 > max_size)
+    {
+      printf("Error: Max size is %d.\n", max_size);
+      n2 = 0; // force loop to continue
+    }
+  } while (n2 <= 0);
+
+  printf("Input second array elements (%d numbers): ", n2);
+  for (i = 0; i < n2; i++)
+  {
+    scanf("%d", &arr2[i]);
   }
 
-  for (size_t i = 0; i < 100; i++)
+  // --- Merge Arrays ---
+  n3 = n1 + n2;
+
+  // Copy first array to merged array
+  for (i = 0; i < n1; i++)
   {
-    mergedArray[i] = array1[i];
+    merged[i] = arr1[i];
   }
 
-  for (size_t i = 0; i < 100; i++)
+  // Append second array to merged array
+  for (i = 0; i < n2; i++)
   {
-    mergedArray[i + 100] = array2[i];
+    merged[n1 + i] = arr2[i];
   }
 
-  // for (size_t i = 0; i < 200; i++)
-  // {
-  //   printf("%d ", mergedArray[i]);
-  // }
+  // --- Sort Merged Array ---
+  bubbleSort(merged, n3);
 
-  printf("Enter array 3 size: ");
-  scanf("%d", &userInput);
-  int array3[userInput];
-
-  for (size_t i = 0; i < userInput; i++)
+  // --- Output Result ---
+  printf("\nMerged array in ascending order = ");
+  for (i = 0; i < n3; i++)
   {
-    scanf("%d", &array3[i]);
+    printf("%d", merged[i]);
+    if (i < n3 - 1)
+    {
+      printf(", ");
+    }
   }
+  printf("\n");
 
   return 0;
 }

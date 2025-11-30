@@ -12,6 +12,7 @@ int create_array(float array[], int max_size)
     n = 0;
   if (n > max_size)
     n = max_size;
+  printf("Enter the elements:\n");
   for (int i = 0; i < n; ++i)
   {
     if (scanf("%f", &array[i]) != 1)

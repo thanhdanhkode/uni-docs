@@ -37,7 +37,7 @@ int main(void)
   {
     if (array[i] < num1 && (array[i] % 2) == 0)
     {
-      opt1[count1++] = i; /* store index */
+      opt1[count1++] = i;
     }
     else if (array[i] > num2 && (array[i] % 2) != 0)
     {
