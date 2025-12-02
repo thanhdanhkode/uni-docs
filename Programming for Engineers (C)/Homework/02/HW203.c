@@ -3,18 +3,19 @@
 // Function prototype
 
 /// @brief Double every element inside arr using pointer
-/// @param arr arr
-/// @param size size of arr
+/// @param arr array
+/// @param size size of array
 void doubleEven(int *arr, int size);
 
-/// @brief Sort all even number in order and odd number in descending, sorted even numbers will display befor sorted odd numbers
-/// @param arr arr
-/// @param size size of arr
+/// @brief Sort all even number in order and odd number in descending,
+/// sorted even numbers will display befor sorted odd numbers
+/// @param arr array
+/// @param size size of array
 void specialSort(int *arr, int size);
 
 /// @brief Reset all odd numbers in arr to 0
-/// @param arr arr
-/// @param size size of arr
+/// @param arr array
+/// @param size size of array
 void resetOdd(int *arr, int size);
 
 /**
@@ -22,18 +23,24 @@ void resetOdd(int *arr, int size);
  */
 int main()
 {
+  // Declare variable
   int myINFO[] = {2, 4, 0, 1, 8, 15, 1};
   int *ptr = &myINFO[0], size = sizeof(myINFO) / sizeof(myINFO[0]);
+  // Assign function into array of pointer function with int pointer arg and int normal arg
   void (*function_pts[3])(int *, int) = {doubleEven, specialSort, resetOdd};
 
-  printf("Current arr: ");
+  printf("Current array: ");
   for (int i = 0; i < size; i++)
   {
     printf("%d ", *(ptr + i));
   }
   puts("");
 
-  printf("\n=============== MENU ==================\n1. Double even numbers (doubleEven)\n2. Special sort (specialSort)\n3. Reset odd numbers to 0 (resetOdd)\n4. Exit program\n=======================================\n");
+  printf("\n=============== MENU ==================\n");
+  printf("1. Double even numbers (doubleEven)\n");
+  printf("2. Special sort (specialSort)\n");
+  printf("3. Reset odd numbers to 0 (resetOdd)\n");
+  printf("4. Exit program\n=======================================\n");
   puts("");
   puts("");
 

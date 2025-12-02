@@ -3,18 +3,19 @@
 // Function prototype
 
 /// @brief Double every element inside arr using pointer
-/// @param arr arr
-/// @param size size of arr
+/// @param arr array
+/// @param size size of array
 void doubleEven(int *arr, int size);
 
-/// @brief Sort all even number in order and odd number in descending, sorted even numbers will display befor sorted odd numbers
-/// @param arr arr
-/// @param size size of arr
+/// @brief Sort all even number in order and odd number in descending,
+/// sorted even numbers will display befor sorted odd numbers
+/// @param arr array
+/// @param size size of array
 void specialSort(int *arr, int size);
 
 /// @brief Reset all odd numbers in arr to 0
-/// @param arr arr
-/// @param size size of arr
+/// @param arr array
+/// @param size size of array
 void resetOdd(int *arr, int size);
 
 /**
@@ -26,7 +27,7 @@ int main()
   int myINFO[] = {2, 4, 0, 1, 8, 15, 1};
   int *ptr = &myINFO[0], size = sizeof(myINFO) / sizeof(myINFO[0]);
 
-  printf("Original Arr: \n");
+  printf("Original Array: \n");
   for (int i = 0; i < size; i++)
   {
     printf("%d ", *(ptr + i));
