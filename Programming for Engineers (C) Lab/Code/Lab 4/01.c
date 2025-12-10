@@ -71,7 +71,7 @@ int main(void)
     return 0;
   }
 
-  printf("Input element array are: ");
+  printf("Input elements array are: ");
   print_array(array, size);
 
   sort_array(array, size);
