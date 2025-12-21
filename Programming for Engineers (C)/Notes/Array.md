@@ -6,15 +6,11 @@
 
 Format `type array_name[array_size] = {...value};`
 
-For example
-
 ```c
 int array[5]= { 0 , 1 , 2 , 3, 4 };
 ```
 
 ### Read the values in array
-
-For example
 
 ```c
 #define SIZE 5
@@ -29,8 +25,6 @@ for (int i = 0; i < SIZE; i++) {
 ### Assign a value into a element of array
 
 Format `array_name[index_of_element] = value`
-
-For example
 
 ```c
 int new_value = 3;
