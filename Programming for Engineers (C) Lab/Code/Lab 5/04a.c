@@ -2,75 +2,44 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 50
-
 int main()
 {
-  int arr[SIZE];
-  int *ptr = arr;
-  int val, i, count = 0;
-  int current_size = SIZE;
+  int a[50], n = 50, x, count = 0;
+  int *p = a;
 
-  srand(time(0));
-
-  for (i = 0; i < SIZE; i++)
-  {
-    *(ptr + i) = rand() % 50 + 1;
-  }
+  srand(time(NULL));
 
   printf("The original array\n");
-  for (i = 0; i < SIZE; i++)
+  for (int i = 0; i < n; i++)
   {
-    printf("%3d", *(ptr + i));
+    *(p + i) = rand() % 50 + 1;
+    printf("%3d ", *(p + i));
     if ((i + 1) % 10 == 0)
-    {
       printf("\n");
-    }
   }
-  printf("\n");
 
-  printf("Enter a value (from 1 to 50) to be deleted = ");
-  scanf("%d", &val);
+  printf("\nEnter a value (from 1 to 50) to be deleted = ");
+  scanf("%d", &x);
 
-  int *write_ptr = arr;
-  int *read_ptr = arr;
-
-  for (i = 0; i < SIZE; i++)
+  for (int i = 0; i < n; i++)
   {
-    if (*read_ptr == val)
-    {
+    if (*(p + i) == x)
       count++;
-    }
     else
-    {
-      *write_ptr = *read_ptr;
-      write_ptr++;
-    }
-    read_ptr++;
+      *(p + i - count) = *(p + i);
   }
 
-  current_size = SIZE - count;
+  n -= count;
 
-  printf("The new array\n");
-  if (current_size == 0)
+  printf("\nThe new array\n");
+  for (int i = 0; i < n; i++)
   {
-    printf("(Array is empty)\n");
-  }
-  else
-  {
-    for (i = 0; i < current_size; i++)
-    {
-      printf("%3d ", *(ptr + i));
-      if ((i + 1) % 10 == 0)
-      {
-        printf("\n");
-      }
-    }
+    printf("%3d ", *(p + i));
+    if ((i + 1) % 10 == 0)
+      printf("\n");
   }
 
-  puts("");
-
-  printf("There are %d values of %d being deleted from the original array\n", count, val);
+  printf("\n\nThere are %d values of %d being deleted from the original array.\n", count, x);
 
   return 0;
 }

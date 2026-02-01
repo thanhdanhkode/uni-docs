@@ -28,7 +28,7 @@ int main()
   // --- Input First Array ---
   do
   {
-    printf("Enter the number of elements for the first array: ");
+    printf("Enter the number of elements for the first array\n: ");
     scanf("%d", &n1);
     if (n1 <= 0)
     {
@@ -41,7 +41,7 @@ int main()
     }
   } while (n1 <= 0);
 
-  printf("Input first array elements (%d numbers): ", n1);
+  printf("Input first array elements (%d numbers):\n", n1);
   for (i = 0; i < n1; i++)
   {
     scanf("%d", &arr1[i]);

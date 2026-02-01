@@ -30,7 +30,7 @@ int main()
   printf("Enter job title: ");
   scanf("%s", &person_info.job_title);
 
-  printf("Here is the infomation:\n");
+  printf("\nHere is the infomation:\n");
   printf("Full name: %s %s", person_info.first_name, person_info.last_name);
   printf("\nAge: %d", person_info.age);
   printf("\nNationality: %s", person_info.nationality);

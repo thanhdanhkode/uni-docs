@@ -40,6 +40,8 @@ int main()
       if (*p == *p_key)
       {
         index = i + 1;
+        found = 1;
+        break;
       }
       *p == *p_key ? index = i + 1 : index;
       *p == *p_key ? 1 : 0;

@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// 1. Define the Structure
 struct Time
 {
   int hours;

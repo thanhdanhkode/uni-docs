@@ -7,9 +7,9 @@ int main()
   printf("Enter N (0 < N < 11): ");
   scanf("%d", &size);
 
-  if (size <= 0 || size >= 10)
+  if (size <= 0 || size >= 11)
   {
-    printf("Size must be greater than 0 and less than 10.\n");
+    printf("Size must be greater than 0 and less than 11.\n");
     return 1;
   }
 

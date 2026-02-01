@@ -4,12 +4,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Function prototype
-
-/// @brief Bubble Sort function
-/// @param arr array
-/// @param size size of array
-/// @param order 0 for ascending and 1 for descending
 void bubbleSort(int *arr, int *size, int order);
 
 int main()

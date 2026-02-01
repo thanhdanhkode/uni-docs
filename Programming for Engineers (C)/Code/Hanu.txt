@@ -1,0 +1,11 @@
+<Valkoria>
+<Version>1</Version>
+<Bank>
+	<BankAccounts>
+		<Account Identifier="" Name="" Balance="" />
+	</BankAccounts>
+	<BankTransactions>
+		<Transaction Identifier="" Date="" Data="" Type="" Status="" />
+	</BankTransactions>
+</Bank>
+</Valkoria>

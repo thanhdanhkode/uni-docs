@@ -4,19 +4,37 @@ typedef struct
 {
   float real;
   float imagine;
-} ComplexType;
+} Complex;
 
 int main()
 {
-  ComplexType complex1;
-  ComplexType complex2;
+  int size;
+  float realSum = 0, imagineSum = 0;
 
-  printf("Enter the first complex: ");
-  scanf("%f %f", &complex1.real, &complex1.imagine);
-  printf("Enter the second complex: ");
-  scanf("%f %f", &complex2.real, &complex2.imagine);
+  printf("Enter number of complex numbers: ");
+  scanf("%d", &size);
 
-  printf("Sum: %.1f %.1fi", complex1.real + complex2.real, complex1.imagine + complex2.imagine);
+  if (size < 2)
+  {
+    printf("Error: At least two complex numbers are required.\n");
+    return 1;
+  }
+
+  Complex complex[size];
+
+  for (int i = 0; i < size; i++)
+  {
+    printf("Enter the complex %d: ", i + 1);
+    scanf("%f %f", &complex[i].real, &complex[i].imagine);
+  }
+
+  for (int i = 0; i < size; i++)
+  {
+    realSum += complex[i].real;
+    imagineSum += complex[i].imagine;
+  }
+
+  printf("Sum: %.1f %.1fi", realSum, imagineSum);
 
   return 0;
 }

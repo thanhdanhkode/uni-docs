@@ -1,0 +1,87 @@
+{
+  "editor.wrapOnEscapedLineFeeds": false,
+  "cSpell.words": [
+    "Valkoria"
+  ],
+  "C_Cpp.default.compilerPath": "C:/MSYS64/ucrt64/bin/gcc.exe",
+  "commentHeaderGenerator.commentStyles": {
+    "/": {
+    "Single Line": {
+      "width": 80,
+      "lines": [
+        [
+          {
+            "type": "segment",
+            "text": "// ",
+          },
+          {
+            "type": "selection",
+          },
+          {
+            "type": "segment",
+            "text": " ",
+          },
+          {
+            "type": "filler",
+            "text": "-",
+          },
+        ],
+      ],
+    },
+    "Multi Line": {
+      "width": 80,
+      "lines": [
+        [
+          {
+            "type": "segment",
+            "text": "/",
+          },
+          {
+            "type": "filler",
+            "text": "*",
+          },
+          {
+            "type": "segment",
+            "text": " ",
+          },
+        ],
+        [
+          {
+            "type": "segment",
+            "text": " *",
+          },
+          {
+            "type": "filler",
+            "text": " ",
+          },
+          {
+            "type": "selection",
+          },
+          {
+            "type": "filler",
+            "text": " ",
+          },
+          {
+            "type": "segment",
+            "text": "* ",
+          },
+        ],
+        [
+          {
+            "type": "segment",
+            "text": " ",
+          },
+          {
+            "type": "filler",
+            "text": "*",
+          },
+          {
+            "type": "segment",
+            "text": "/",
+          },
+        ],
+      ],
+    },
+  },
+  }
+}
